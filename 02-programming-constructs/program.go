@@ -97,4 +97,33 @@ func main() {
 		fmt.Println("Invalid")
 	}
 
+	// fall through
+	score = 0
+	switch score {
+	case 0:
+		fmt.Println("0")
+		fallthrough
+	case 1:
+		fmt.Println("1")
+		fallthrough
+	case 2:
+		fmt.Println("2")
+		fallthrough
+	case 3:
+		fmt.Println("3")
+		fallthrough
+	case 4:
+	case 5:
+	case 6:
+	case 7:
+		fmt.Println("Not Bad")
+	case 8:
+	case 9:
+		fmt.Println("Good")
+	case 10:
+		fmt.Println("Excellent")
+	default:
+		fmt.Println("Invalid")
+	}
+
 }
