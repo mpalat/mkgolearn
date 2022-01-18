@@ -36,4 +36,14 @@ func main() {
 	)
 
 	fmt.Println(red, green, blue)
+
+	// Type conversion
+	var vInt int = 100
+	var vFloat float32 = 200.00
+	var vResult = float32(vInt) + vFloat
+	fmt.Printf("vResult is %f of Type %T\n", vResult, vResult)
+
+	var vResult1 = vInt + int(vFloat)
+	fmt.Printf("vResult1 is %d of Type %T\n", vResult1, vResult1)
+
 }
