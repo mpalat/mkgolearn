@@ -1,1 +1,14 @@
 Paradox of Choice (Barry Schwartz)
+=======
+
+1. Simplicity
+    Only 25 keywords
+    1. No classes (only structs and functions)
+    2. no inheritance (only composition)
+    3. no access modifiers (public, private, protected)
+    4. no exceptions (only errors)
+    5. Only one looping construct - for loop - that can be used in differnt ways
+
+
+
+Paradox of Choice (Barry Schwartz)
