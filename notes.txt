@@ -7,8 +7,21 @@ Paradox of Choice (Barry Schwartz)
     2. no inheritance (only composition)
     3. no access modifiers (public, private, protected)
     4. no exceptions (only errors)
-    5. Only one looping construct - for loop - that can be used in differnt ways
+    5. Pointers are supported but no pointer arithmetic
+    6. Value by default
+    . Only one looping construct - for loop - that can be used in differnt ways
+
+2. Performance
+
+3. Built for concurrency
+    go, chan (data type), <- (channel operator), built-in scheduler
 
 
+To run the go program
+ go run 01-hello-world.go
+
+To create a build
+    go build 01-hello-world.go
+    go  build -o hw 01-hello-world.go
 
 Paradox of Choice (Barry Schwartz)
