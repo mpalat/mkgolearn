@@ -25,4 +25,15 @@ func main() {
 
 	a, b, str := 10, 20, "a:%v b:%v\n"
 	fmt.Printf(str, a, b)
+
+	const z = 100
+
+	const (
+		red = iota + 5
+		green
+		_
+		blue
+	)
+
+	fmt.Println(red, green, blue)
 }
