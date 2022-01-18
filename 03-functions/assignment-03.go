@@ -28,15 +28,15 @@ func getInput() int {
 }
 
 func shouldExit(choice int) bool {
-	shouldExit := false
+	if choice >= 1 && choice < 5 {
+		return false
+	}
 	if choice == 5 {
 		fmt.Println("Exiting")
-		shouldExit = true
-	} else if choice > 5 {
+	} else {
 		fmt.Println("Invalid")
-		shouldExit = true
 	}
-	return shouldExit
+	return true
 }
 
 func getTwoInputs() (int, int) {
