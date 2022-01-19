@@ -22,7 +22,5 @@ func increment(addrNo *int) {
 	*addrNo++
 }
 func swap(px, py *int) {
-	tmp := *px
-	*px = *py
-	*py = tmp
+	*px, *py = *py, *px
 }
