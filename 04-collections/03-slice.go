@@ -38,4 +38,8 @@ func main() {
 
 	fmt.Println("Note only the header references are updated for prod and newProd - so be careful")
 	fmt.Println("Maybe useful in in-array sorting where same parts of the same array to be manipulated")
+
+	fmt.Println("Operation: prods = append(prods[0:2], prods[4:]...) ")
+	prods = append(prods[0:2], prods[4:]...) // ... is the opertator to spread out the values
+	fmt.Println(prods)
 }
