@@ -7,10 +7,13 @@ import (
 	// . "modularity-demo/calculator" - . to import globally - not advised
 	"modularity-demo/calculator/utils"
 
+	_ "modularity-demo/dummy" // _ will make sure init fn will be called even though there is no use
+
 	"github.com/fatih/color"
 )
 
 func main() {
+	fmt.Println("hello")
 	result := calc.Add(10, 10)
 	fmt.Println(result)
 	result = calc.Subtract(10, 10)
