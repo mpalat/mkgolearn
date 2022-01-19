@@ -18,6 +18,14 @@ func main() {
 		fmt.Println(error)
 	}
 
+	fmt.Println("Named Retiurn Values")
+	result, error = divideNamed(10, 0)
+	if result != nil {
+		fmt.Println(result)
+	} else {
+		fmt.Println(error)
+	}
+
 }
 
 // errors should always be the last as per convention
@@ -26,4 +34,13 @@ func divide(x, y int) (int, error) {
 		return 0, DivideByZeroerror
 	}
 	return x / y, nil
+}
+
+func divideNamed(x, y int) (result int, err error) {
+	if y == 0 {
+		err = DivideByZeroerror
+		return
+	}
+	result = x / y
+	return
 }
