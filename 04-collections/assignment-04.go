@@ -11,20 +11,18 @@ var operations = map[int]func(int, int) int{
 
 func main() {
 
-	choice := getInput()
-
-	if operation, exists := operations[choice]; exists {
-		n1, n2 := getTwoInputs()
-		fmt.Printf("result is: %d\n", operation(n1, n2))
-		return
+	for {
+		choice := getInput()
+		if operation, exists := operations[choice]; exists {
+			n1, n2 := getTwoInputs()
+			fmt.Printf("result is: %d\n", operation(n1, n2))
+		} else if choice == 5 {
+			fmt.Println("Exiting")
+			return
+		} else {
+			fmt.Println("Invalid")
+		}
 	}
-	if choice == 5 {
-		fmt.Println("Exiting")
-	} else {
-		fmt.Println("Invalid")
-	}
-	return
-
 }
 
 func add(x, y int) int {
