@@ -6,6 +6,8 @@ import (
 
 	// . "modularity-demo/calculator" - . to import globally - not advised
 	"modularity-demo/calculator/utils"
+
+	"github.com/fatih/color"
 )
 
 func main() {
@@ -16,4 +18,5 @@ func main() {
 	fmt.Println(calc.GetOpCounter())
 	fmt.Println(calc.OpCounter)
 	fmt.Println(utils.IsPrime(17))
+	color.Blue("is 97 a prime number:%t\n", utils.IsPrime(97))
 }
