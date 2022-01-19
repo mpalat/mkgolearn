@@ -20,22 +20,15 @@ func main() {
 	words := strings.Split(str, " ")
 	for _, key := range words {
 		iKey := len(key)
+		var gVal int = 1
 		if val, exists := sMap[iKey]; exists {
-			val++
-			sMap[iKey] = val
-			if val > maxVal {
-				maxVal = val
-				maxKey = iKey
-			}
-		} else {
-			sMap[iKey] = 1
-			if val > maxVal {
-				maxVal = val
-				maxKey = iKey
-			}
+			gVal = val + 1
+		}
+		sMap[iKey] = gVal
+		if gVal > maxVal {
+			maxVal = gVal
+			maxKey = iKey
 		}
 	}
-
 	fmt.Printf("words with  length:%d occur most %d number of times\n", maxKey, sMap[maxKey])
-
 }
