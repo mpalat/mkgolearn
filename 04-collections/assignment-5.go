@@ -18,16 +18,16 @@ func main() {
 	maxKey := 0
 	words := strings.Split(str, " ")
 
-	for _, key := range words {
-		iKey := len(key)
+	for _, word := range words {
+		key := len(word)
 		var gVal int = 1
-		if val, exists := sMap[iKey]; exists {
+		if val, exists := sMap[key]; exists {
 			gVal = val + 1
 		}
-		sMap[iKey] = gVal
+		sMap[key] = gVal
 		if gVal > maxVal {
 			maxVal = gVal
-			maxKey = iKey
+			maxKey = key
 		}
 	}
 	fmt.Printf("words with  length:%d occur most %d number of times\n", maxKey, sMap[maxKey])
