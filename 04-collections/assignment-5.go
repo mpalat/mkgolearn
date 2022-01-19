@@ -20,11 +20,8 @@ func main() {
 
 	for _, word := range words {
 		key := len(word)
-		var gVal int = 1
-		if val, exists := sMap[key]; exists {
-			gVal = val + 1
-		}
-		sMap[key] = gVal
+		sMap[key]++
+		gVal := sMap[key]
 		if gVal > maxVal {
 			maxVal = gVal
 			maxKey = key
