@@ -65,5 +65,4 @@ func main() {
 	for idx, val := range prodStartEmpty {
 		fmt.Printf("prodStartEmpty[%d] =%s\n", idx, val)
 	}
-
 }
