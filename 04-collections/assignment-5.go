@@ -14,10 +14,10 @@ func main() {
 	//example output : 4 letters occur the most with 29 occurrences
 
 	var sMap map[int]int = make(map[int]int)
-
 	maxVal := 0
 	maxKey := 0
 	words := strings.Split(str, " ")
+
 	for _, key := range words {
 		iKey := len(key)
 		var gVal int = 1
