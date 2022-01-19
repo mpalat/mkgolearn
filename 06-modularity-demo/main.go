@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	calc "modularity-demo/calculator"
+
+	// . "modularity-demo/calculator" - . to import globally - not advised
 	"modularity-demo/calculator/utils"
 )
 
