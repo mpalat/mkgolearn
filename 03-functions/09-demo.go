@@ -20,7 +20,7 @@ func main() {
 
 	fmt.Println("Named Retiurn Values")
 	result, error = divideNamed(10, 0)
-	if result != nil {
+	if error != nil {
 		fmt.Println(result)
 	} else {
 		fmt.Println(error)
