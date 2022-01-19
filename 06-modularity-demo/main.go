@@ -9,5 +9,8 @@ import (
 func main() {
 	result := calculator.Add(10, 10)
 	fmt.Println(result)
-	fmt.Println(utils.IsPrime(result))
+	result = calculator.Subtract(10, 10)
+	fmt.Println(result)
+	fmt.Println(calculator.GetOpCounter())
+	fmt.Println(utils.IsPrime(17))
 }
