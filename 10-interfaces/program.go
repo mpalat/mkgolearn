@@ -21,18 +21,32 @@ type ShapeWithPerimeter interface {
 	Perimeter() float64
 }
 
+//interface composition
+type ShapeWithDetails interface {
+	ShapeWithArea
+	ShapeWithPerimeter
+}
+
 func main() {
 
 	c := Circle{Radius: 12}
 	// fmt.Println(c.Area())
-	PrintArea(c)
-	PrintPerimeter(c)
+	// PrintArea(c)
+	// PrintPerimeter(c)
+	PrintDetails(c)
 
 	r := Rectangle{height: 10, width: 12}
 	// fmt.Println(r.Area())
-	PrintArea(r)
-	PrintPerimeter(r)
+	// PrintArea(r)
+	// PrintPerimeter(r)
+	PrintDetails(r)
 
+}
+
+func PrintDetails(x ShapeWithDetails) {
+	// Print Area and Perimeter
+	PrintArea(x)
+	PrintPerimeter(x)
 }
 
 func (c Circle) Area() float64 {
