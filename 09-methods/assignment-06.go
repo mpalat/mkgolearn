@@ -1,5 +1,3 @@
-
-   
 package main
 
 import "fmt"
@@ -156,16 +154,3 @@ Any => return true if ANY of the products matches the given criteria else return
 		1. Are there ANY costly product (cost > 1000) ?
 		2. Are there ANY stationary products? (category == "Stationary")
 */
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
