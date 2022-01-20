@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"structs-demo/models"
 )
 
 type Product struct {
@@ -37,6 +38,18 @@ func main() {
 	fmt.Printf("prodPtr.Id = %d\n", prodPtr.Id)
 	fmt.Println(prodPtr)
 
+	// empPtr := &Employee{1, "Ram"}
+	// emp := Employee{1, "Lak"}
+	// emp := new(Employee)
+	// fmt.Printf("%#v\n", empPtr)
+	// fmt.Printf("%#v\n", emp)
+
+	emp := models.NewEmployee()
+	fmt.Println(emp)
+
+	reducedCost := ApplyDiscount(&prod, 25.0)
+	fmt.Println("Discounted Price:", reducedCost)
+	fmt.Println(prod)
 }
 
 // func ToString(product Product) string {
@@ -46,4 +59,9 @@ func main() {
 func ToString(product *Product) string {
 	return fmt.Sprintf("Id=%d, Name=%q, Cost=%f, Units=%d, Category=%q\n",
 		product.Id, product.Name, product.Cost, product.Units, product.Category)
+}
+
+func ApplyDiscount(prod *Product, discount float64) float64 {
+	prod.Cost *= (100 - discount) / 100
+	return prod.Cost
 }
