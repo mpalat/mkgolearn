@@ -13,10 +13,14 @@ type Product struct {
 func main() {
 	product := Product{102, "grape1", 10.0, 100, "fruits"} // product is a value type
 	product.ApplyDiscount(10)                              // here the product is a pointer
-	product.jlt(10)                                        // here the product is a value
+	fmt.Println("Prod pointer passed - so prod after making the discount permanent")
+	fmt.Printf("%#v\n", product)
+	product.jlt(10) // here the product is a value
 
 	productPtr := &Product{102, "grape1", 10.0, 100, "fruits"}
 	productPtr.ApplyDiscount(10)
+	fmt.Println("Prod pointer passed - so prod after  the discount permanent")
+	fmt.Printf("%#v\n", productPtr)
 
 }
 
